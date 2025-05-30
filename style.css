@@ -1,0 +1,229 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+header {
+  padding: 40px 20px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInTop 1s ease forwards;
+}
+
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInBottom 1.2s ease forwards 0.5s;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Animaciones clave */
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ... Estilos previos ... */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* 🔷 NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.profile-menu {
+  position: relative;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  color: black;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  animation: fadeInDropdown 0.3s ease forwards;
+  min-width: 160px;
+}
+
+.dropdown li {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dropdown li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Animación para el dropdown */
+@keyframes fadeInDropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🔷 HEADER y animaciones */
+header {
+  padding: 40px 20px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInTop 1s ease forwards;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInBottom 1.2s ease forwards 0.5s;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Barra de progreso */
+.progress-container {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 20px;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #00ff88;
+  transition: width 0.5s ease;
+  border-radius: 0 10px 10px 0;
+}
+
+/* Texto dentro o encima de la barra */
+#progressText {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 2px;
+  z-index: 1;
+}

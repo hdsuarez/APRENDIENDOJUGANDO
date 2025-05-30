@@ -1,0 +1,105 @@
+/* Fondo general */
+body {
+  background-color: #f7f9fc;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Layout en columnas */
+.columnas {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 50px;
+}
+
+/* Cada columna */
+.columna {
+  flex: 1;
+  max-width: 500px;
+}
+
+/* Caja de la calculadora */
+.contenedor {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Título */
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+h2 {
+  color: #0066cc;
+}
+
+/* Texto informativo */
+.tamano {
+  text-align: justify;
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* Inputs y etiquetas */
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+  color: #555;
+}
+
+input[type="number"] {
+  padding: 10px;
+  width: 200px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Botón de sumar */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #004999;
+}
+
+/* Resultado */
+#resultado {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #007700;
+  font-weight: bold;
+}
+
+/* Botón de retorno */
+.boton-retorno {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.boton-retorno:hover {
+  background-color: #1e7e34;
+}

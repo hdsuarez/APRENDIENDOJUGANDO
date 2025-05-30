@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Test de Conocimiento</title>
+  <link rel="stylesheet" href="test.css">
+</head>
+<body>
+
+  <div class="columnas">
+    <div class="columna">
+      <h2>TEST DE CONOCIMIENTO</h2>
+      <p class="tamano">
+        <strong>TEST:</strong> En esta sección pondrás a prueba los conocimientos adquiridos durante el curso. ¡¡¡¡BUENA SUERTE!!!!
+      </p>
+
+      <!-- id formulario para linkearlos con el js -->
+      <form id="formulario">
+        <p><strong>Ejercicios:</strong></p>
+
+        <!-- Preguntas -->
+        <label>2 + 2 = <input type="text" name="resp1"></label><br>
+        <label>5 + 3 = <input type="text" name="resp2"></label><br>
+        <label>10 + 15 = <input type="text" name="resp3"></label><br>
+
+        <label>2 - 2 = <input type="text" name="resp4"></label><br>
+        <label>5 - 3 = <input type="text" name="resp5"></label><br>
+        <label>15 - 10 = <input type="text" name="resp6"></label><br>
+
+        <label>2 × 2 = <input type="text" name="resp7"></label><br>
+        <label>6 × 3 = <input type="text" name="resp8"></label><br>
+        <label>10 × 15 = <input type="text" name="resp9"></label><br>
+
+        <label>2 ÷ 2 = <input type="text" name="resp10"></label><br>
+        <label>6 ÷ 3 = <input type="text" name="resp11"></label><br>
+        <label>15 ÷ 5 = <input type="text" name="resp12"></label><br>
+
+        <label>2! = <input type="text" name="resp13"></label><br>
+        <label>5! = <input type="text" name="resp14"></label><br>
+        <label>10! = <input type="text" name="resp15"></label><br>
+
+        <br>
+        <button type="button" onclick="revisarRespuestas()">Revisar respuestas</button>
+        <p id="resultadoFinal"></p>
+      </form>
+
+      <a href="/index.html" class="boton-retorno">Página Principal</a>
+    </div>
+  </div>
+
+  
+  <script src="test.js"></script>
+</body>
+</html>

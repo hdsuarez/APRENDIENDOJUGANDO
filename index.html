@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aprende Jugando</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Barra superior -->
+  <nav class="navbar">
+    <div class="logo">FCA (Fundacion Codigo Abierto)</div>
+    <div class="profile-menu">
+      <img src="/imagenes/foto de perfil.webp" alt="Perfil" class="profile-pic" onclick="toggleMenu()" />
+      <ul class="dropdown" id="dropdownMenu">
+        <li> Usuario</li>
+        <li> Menú principal</li>
+        <li> Módulos</li>
+        <li>Configuración</li>
+        <li> Cerrar sesión</li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Encabezado -->
+  <header>
+    <h1>Lista de Proyectos</h1>
+    <p>Selecciona una operación</p>
+  </header>
+
+  <!-- Botonoes de acceso -->
+    <main class="cards-container">
+      <a class="card" href="suma/suma.html">Suma</a>
+      <a class="card" href="resta/resta.html">Resta</a>
+      <a class="card" href="multiplicacion/multiplicacion.html">Multiplicación</a>
+      <a class="card" href="division/division.html">División</a>
+      <a class="card" href="factorial/factorial.html">Factorial</a>
+      <a class="card" href="/test/test.html">Test</a>
+    </main>
+
+  <!-- Barra de progreso -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Barra de progreso -->
+  <div class="progress-container">
+    <span id="progressText">0% completado</span>
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
