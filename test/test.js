@@ -1,4 +1,4 @@
-  function revisarRespuestas() {
+function revisarRespuestas() {
   const respuestasCorrectas = [
     4, 8, 25,       // sumas
     0, 2, 5,        // restas
@@ -7,7 +7,6 @@
     2, 120, 3628800 // factoriales
   ];
 
-  // link con el id
   const formulario = document.getElementById("formulario");
   let aciertos = 0;
 
@@ -15,21 +14,50 @@
     const input = formulario.elements[`resp${i + 1}`];
     let valorIngresado = input.value.trim();
 
-    // Convertimos a número
     let valorNumerico = parseFloat(valorIngresado);
-
-    // Verificamos si es número válido
     if (isNaN(valorNumerico)) continue;
 
-    // Comparamos con las respuestas correctas
     if (valorNumerico === respuestasCorrectas[i]) {
       aciertos++;
     }
   }
 
-  // Mostramos los resultados
+  // Mostrar resultado final
   document.getElementById("resultadoFinal").textContent =
     `Respuestas correctas: ${aciertos} de ${respuestasCorrectas.length}`;
-}
 
+  // Calcular porcentaje
+  const total = respuestasCorrectas.length;
+  const porcentaje = Math.round((aciertos / total) * 100);
+
+  // Actualizar barra de progreso
+  const barra = document.getElementById("barraProgreso");
+  barra.style.width = porcentaje + "%";
+  barra.textContent = porcentaje + "%";
+
+  // Cambiar color
+  if (porcentaje < 50) {
+    barra.style.backgroundColor = "#f44336"; // rojo
+  } else if (porcentaje < 80) {
+    barra.style.backgroundColor = "#ffc107"; // amarillo
+  } else {
+    barra.style.backgroundColor = "#4caf50"; // verde
+  }
+
+  //  GIF animado 
+  const imagen = document.getElementById("imagenAnimada");
+  
+  if (porcentaje < 50) {
+    imagen.src = "../imagenes/ha-ha-nelson.gif"; 
+    imagen.style.display = "inline-block";
+
+  } else if (porcentaje < 80) {
+    imagen.src = "../imagenes/goodjob.gif"; 
+    imagen.style.display = "inline-block";
+
+  } else {
+    imagen.src = "../imagenes/lisa.gif"; 
+    imagen.style.display = "inline-block";
+  }
+}
 

@@ -4,6 +4,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   min-height: 100vh;
+  padding: 20px;
 }
 
 /* Layout en columnas */
@@ -18,24 +19,14 @@ body {
 /* Cada columna */
 .columna {
   flex: 1;
-  max-width: 500px;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 25px 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* Caja de la calculadora */
-.contenedor {
-  background-color: white;
-  padding: 30px 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-/* Título */
-h1 {
-  margin-bottom: 20px;
-  color: #333;
-}
-
+/* Títulos */
 h2 {
   color: #0066cc;
 }
@@ -56,7 +47,7 @@ label {
   color: #555;
 }
 
-input[type="number"] {
+input[type="text"], input[type="number"] {
   padding: 10px;
   width: 200px;
   margin-top: 5px;
@@ -64,11 +55,11 @@ input[type="number"] {
   border-radius: 6px;
 }
 
-/* Botón de sumar */
+/* Botón */
 button {
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #0066cc;
+  background-color: #2196f3;
   color: white;
   border: none;
   border-radius: 8px;
@@ -77,11 +68,11 @@ button {
 }
 
 button:hover {
-  background-color: #004999;
+  background-color: #1976d2;
 }
 
 /* Resultado */
-#resultado {
+#resultadoFinal {
   margin-top: 20px;
   font-size: 18px;
   color: #007700;
@@ -102,4 +93,39 @@ button:hover {
 
 .boton-retorno:hover {
   background-color: #1e7e34;
+}
+
+/* Contenedor de la barra */
+.contenedor-barra {
+  width: 100%;
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+/* Barra de progreso */
+.barra-progreso, #barraProgreso {
+  width: 0%;
+  height: 25px;
+  background-color: #4caf50;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  line-height: 25px;
+  font-weight: bold;
+  transition: width 0.4s ease;
+}
+
+/* Imagen GIF de resultado */
+#animacionResultado {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#imagenAnimada {
+  max-width: 200px;
+  display: none; /* empieza oculta, se muestra con JS */
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
